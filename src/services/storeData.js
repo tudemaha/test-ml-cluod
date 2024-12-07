@@ -4,7 +4,6 @@ async function storeData(id, data) {
   const db = new Firestore({
     projectId: process.env.PROJECT_ID,
   });
-  FirebaseFirestore;
 
   const predictCollection = db.collection("prediction");
   return predictCollection.doc(id).set(data);
