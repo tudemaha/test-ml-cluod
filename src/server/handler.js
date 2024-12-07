@@ -1,6 +1,7 @@
 const predictClassification = require("../services/inferenceService");
 const storeData = require("../services/storeData");
 const { Firestore } = require("@google-cloud/firestore");
+const crypto = require("crypto");
 
 async function postPredictHandler(request, h) {
   const { image } = request.payload;
